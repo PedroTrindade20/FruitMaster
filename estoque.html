@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos Cadastrados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estoque.css" />
+  </head>
+  <body>
+    <header>
+      <img src="imagens/logo1.png" />
+      <h1>Fruit Master</h1>
+      <div id="welcomeMessage">Olá, (nome do usuário)!</div>
+      <div class="dropdown">
+        <button class="dropbtn">Serviços</button>
+        <div class="dropdown-content">
+          <a href="inicio.html">Home</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="index.html">Sair</a>
+        </div>
+      </div>
+    </header>
+    <h2>Cadastro de Produtos</h2>
+    <form id="productForm">
+      <div class="form-group">
+        <label for="productName">Nome do Produto:</label>
+        <input type="text" id="productName" required />
+      </div>
+      <div class="form-group">
+        <label for="productQuantity">Quantidade:</label>
+        <input type="number" id="productQuantity" required />
+      </div>
+      <div class="form-group">
+        <label for="productLocation">Local de Estoque:</label>
+        <input type="text" id="productLocation" required />
+      </div>
+      <input type="hidden" id="productId" />
+      <button type="submit">Cadastrar Produto</button>
+      <button type="button" id="updateButton" style="display: none">
+        Atualizar Produto
+      </button>
+    </form>
+    <h2>Produtos Cadastrados</h2>
+    <div class="grid-container" id="productGrid">
+      <!-- Produtos aparecerão aqui -->
+    </div>
+
+    <script src="produtos.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <style>
+      img {
+        padding-left: 100px;
+        height: 100px;
+      }
+      h2 {
+        font-size: 28px;
+        text-align: center;
+        color: white;
+        font-family: cursive;
+      }
+      p {
+        color: rgb(209, 209, 209);
+        text-align: center;
+        height: 10px;
+        font-size: 14px;
+      }
+      label {
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Bem-vindo ao sistema de estoque</h2>
+      <img src="imagens/login.png" />
+      <h1>Entrar</h1>
+      <form id="loginForm">
+        <input
+          type="text"
+          id="username"
+          placeholder="Nome de Usuário"
+          required
+        />
+        <input type="password" id="password" placeholder="Senha" required />
+        <label>
+          <input type="checkbox" id="showPassword" /> Mostrar senha
+        </label>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("showPassword")
+        .addEventListener("change", function () {
+          const passwordField = document.getElementById("password");
+          if (this.checked) {
+            passwordField.type = "text";
+          } else {
+            passwordField.type = "password";
+          }
+        });
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Impede o envio do formulário
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          if (
+            (username === "admP.01" || username === "admK.02") &&
+            password === "FruitM04"
+          ) {
+            window.location.href = "inicio.html"; // Redireciona para a página de início
+          } else {
+            alert("Nome de usuário ou senha incorretos.");
+          }
+        });
+    </script>
+  </body>
+</html>

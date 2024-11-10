@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="inicio.css" />
+    <link rel="stylesheet" href="estoque.css" />
+    <link rel="stylesheet" href="janelas.css" />
+    <link rel="stylesheet" href="equipeimg.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+    <link rel="stylesheet" href="slideshow.css" />
+  </head>
+  <body>
+    <header>
+      <img src="imagens/logo1.png" />
+      <h1>Fruit Master</h1>
+      <div id="welcomeMessage"></div>
+      <div class="dropdown">
+        <button class="dropbtn">Serviços</button>
+        <div class="dropdown-content">
+          <a href="inicio.html">Home</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="index.html">Sair</a>
+        </div>
+      </div>
+    </header>
+    <button class="tablink" onclick="openPage('Home', this, '#777')">
+      Home
+    </button>
+    <button
+      class="tablink"
+      onclick="openPage('News', this, '#777')"
+      id="defaultOpen"
+    >
+      Estoque
+    </button>
+    <button class="tablink" onclick="openPage('Contact', this, '#777')">
+      Contato
+    </button>
+    <button class="tablink" onclick="openPage('About', this, '#777')">
+      Sobre
+    </button>
+
+    <div id="Home" class="tabcontent">
+      <div class="container">
+        <h2>Seja bem-vindo ao Fruit-Master!</h2>
+        <p>
+          Nosso sistema é voltado para fazendas urbanas, uma ferramenta
+          essencial para melhorar a eficiência e a sustentabilidade do
+          fornecimento de alimentos nas cidades. Com ele, buscamos não apenas
+          otimizar a operação das fazendas urbanas, mas também inspirar outras
+          iniciativas a adotar práticas agrícolas sustentáveis e tecnológicas.
+        </p>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="imagens/slide1.png" style="width: 100%" />
+            <div class="text">Caption Text</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="imagens/slide2.png" style="width: 100%" />
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="imagens/slide3.png" style="width: 100%" />
+            <div class="text">Caption Three</div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="News" class="tabcontent">
+      <div class="cadastropro">
+        <h2>Cadastro de Produtos</h2>
+        <form id="productForm">
+          <div class="form-group">
+            <label for="productName">Nome do Produto:</label>
+            <input type="text" id="productName" required />
+          </div>
+          <div class="form-group">
+            <label for="productQuantity">Quantidade:</label>
+            <input type="number" id="productQuantity" required />
+          </div>
+          <div class="form-group">
+            <label for="productLocation">Local de Estoque:</label>
+            <input type="text" id="productLocation" required />
+          </div>
+          <input type="hidden" id="productId" />
+          <button type="submit">Cadastrar Produto</button>
+          <button type="button" id="updateButton" style="display: none">
+            Atualizar Produto
+          </button>
+        </form>
+        <h2>Produtos Cadastrados</h2>
+        <div class="grid-container" id="productGrid">
+          <!-- Produtos aparecerão aqui -->
+        </div>
+      </div>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+      <h1>Contato</h1>
+      <p>Entre em contato com nossa equipe.</p>
+      <div class="icons">
+        <ul>
+          <li>
+            <a href="https://wa.me/5518981147024" target="_blank">
+              <img src="imagens/whats.png" alt="WhatsApp" /> Whatsapp
+            </a>
+          </li>
+          <li>
+            <a href="mailto:fruit.master04@gmail.com" target="_blank">
+              <img src="imagens/gmail.png" alt="E-mail" /> E-mail
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="About" class="tabcontent">
+      <h1>Sobre</h1>
+      <p class="sobre">
+        O Fruit Master é uma ferramenta essencial para melhorar a eficiência e a
+        sustentabilidade do fornecimento de alimentos nas cidades. Com ele,
+        buscamos não apenas otimizar a operação das fazendas urbanas, mas também
+        inspirar outras iniciativas a adotar práticas agrícolas sustentáveis e
+        tecnológicas. Este sistema é um exemplo do compromisso de desenvolver
+        soluções inovadoras para os desafios contemporâneos.
+      </p>
+      <p class="sobre">
+        O objetivo do Fruit-Master é otimizar o gerenciamento de estoque em
+        fazendas urbanas, facilitando o cadastro, a atualização e o controle dos
+        produtos agrícolas. Com isso, busca-se promover a sustentabilidade, a
+        eficiência operacional e a transparência na cadeia produtiva.
+      </p>
+      <h2>Benefícios</h2>
+      <p class="sobre">
+        <strong>Sustentabilidade:</strong> Reduz o desperdício de alimentos e
+        promove práticas agrícolas sustentáveis.
+      </p>
+      <p class="sobre">
+        <strong>Eficiência:</strong> Automatiza o gerenciamento de estoque,
+        economizando tempo e recursos.
+      </p>
+      <p class="sobre">
+        <strong>Transparência:</strong> Proporciona informações claras sobre o
+        cultivo e a validade dos produtos, fortalecendo a confiança dos
+        consumidores.
+      </p>
+      <p class="sobre">
+        <strong>Inovação:</strong> Utiliza tecnologia moderna para resolver
+        desafios antigos da agricultura urbana.
+      </p>
+      <img
+        id="myImg"
+        src="imagens/equipe.jpeg"
+        alt="Equipe Fruit Master"
+        style="width: 50%"
+      />
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01" />
+        <div id="caption"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2024 FRUIT-MASTER fazenda urbana. Todos os direitos reservados.
+      </p>
+    </footer>
+    <script src="janelas.js"></script>
+    <script src="equipeimg.js"></script>
+    <script src="usuarios.js"></script>
+    <script src="produtos.js"></script>
+    <script src="slideshow.js"></script>
+  </body>
+</html>

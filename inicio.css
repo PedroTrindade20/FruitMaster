@@ -1,0 +1,87 @@
+body {
+  font-family: "Chakra Petch", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #012340;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  height: 100px;
+}
+header h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 80;
+  margin-left: 20%;
+}
+
+footer {
+  background-color: #012340;
+  color: white;
+  margin-top: 230px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  font-size: 15px;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+.container h2 {
+  font-family: "Chakra Petch", sans-serif;
+}
+.container p {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+#Contact {
+  background-color: #ffffff;
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+#Contact h1 {
+  color: black;
+
+  margin-bottom: 10px;
+}
+#Contact p {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.icons ul {
+  list-style-type: none;
+  padding: 0;
+}
+.icons li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.icons a {
+  color: #333;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.icons img {
+  height: 32px;
+  margin-right: 8px;
+}
+.sobre {
+  margin-left: 50px;
+  margin-right: 50px;
+}

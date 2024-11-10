@@ -1,0 +1,45 @@
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group button {
+  border-radius: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.grid-item h3 {
+  margin: 0 0 10px;
+}
+
+.grid-item p {
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.cadastropro button {
+  border-radius: 5px;
+}
